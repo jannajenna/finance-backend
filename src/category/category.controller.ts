@@ -9,12 +9,12 @@ export class CategoryController {
 
   @Post()
   async create(@Body() createCategoryDto: CreateCategoryDto) {
-    return await this.categoryService.create(createCategoryDto);
+    return this.categoryService.create(createCategoryDto);
   }
 
   @Get()
   async findAll() {
-    return await this.categoryService.findAll();
+    return this.categoryService.findAll();
   }
 
   //@Get(':id')
